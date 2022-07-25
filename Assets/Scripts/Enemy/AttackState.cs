@@ -8,6 +8,8 @@ public class AttackState : State
     [SerializeField] private int _damage;
     [SerializeField] private float _delay;
 
+    private const string Attack = "Attack";
+
     private float _lastAttackTime;
     private Animator _animator;
 
@@ -29,7 +31,7 @@ public class AttackState : State
 
     private void Attack(Player target)
     {
-        _animator.Play("Attack");
+        _animator.Play(Attack);
         target.ApplyDamage(_damage);
     }
 }

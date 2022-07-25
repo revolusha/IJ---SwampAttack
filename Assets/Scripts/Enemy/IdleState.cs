@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class IdleState : State
 {
+    private const string Idle = "Idle";
+
     private Animator _animator;
 
     private void Awake()
@@ -13,7 +15,7 @@ public class IdleState : State
 
     private void OnEnable()
     {
-        _animator.Play("Idle");
+        _animator.Play(Idle);
     }
 
     private void OnDisable()
